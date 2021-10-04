@@ -1,0 +1,981 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_02x04_Counter_Clockwise J1
+U 1 1 615A1B6D
+P 2450 7100
+F 0 "J1" H 2500 7417 50  0000 C CNN
+F 1 "DIP-8" H 2500 7326 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 2450 7100 50  0001 C CNN
+F 3 "~" H 2450 7100 50  0001 C CNN
+	1    2450 7100
+	1    0    0    -1  
+$EndComp
+Text GLabel 2750 7000 2    50   Input ~ 0
+Vcc
+Text GLabel 2750 7200 2    50   Input ~ 0
+THR
+Text GLabel 2250 7000 0    50   Input ~ 0
+GND
+Text GLabel 2750 7300 2    50   Input ~ 0
+CTRL
+Text GLabel 2750 7100 2    50   Input ~ 0
+DIS
+Text GLabel 2250 7300 0    50   Input ~ 0
+~RST
+Text GLabel 2250 7200 0    50   Input ~ 0
+OUT
+Text GLabel 2250 7100 0    50   Input ~ 0
+TRIG
+$Comp
+L Device:R R1
+U 1 1 615A2DA8
+P 1500 1375
+F 0 "R1" H 1570 1421 50  0000 L CNN
+F 1 "4.7kΩ" H 1570 1330 50  0000 L CNN
+F 2 "Resistor_SMD:R_0201_0603Metric" V 1430 1375 50  0001 C CNN
+F 3 "~" H 1500 1375 50  0001 C CNN
+	1    1500 1375
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 615A3CEA
+P 3250 1375
+F 0 "R3" H 3320 1421 50  0000 L CNN
+F 1 "4.7kΩ" H 3320 1330 50  0000 L CNN
+F 2 "Resistor_SMD:R_0201_0603Metric" V 3180 1375 50  0001 C CNN
+F 3 "~" H 3250 1375 50  0001 C CNN
+	1    3250 1375
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Q_PNP_BEC Q6
+U 1 1 615A55B6
+P 2150 2000
+F 0 "Q6" H 2050 1775 50  0000 L CNN
+F 1 "CET3906E" H 1825 1850 50  0000 L CNN
+F 2 "discrete555:SOT-883L" H 2350 2100 50  0001 C CNN
+F 3 "https://my.centralsemi.com/datasheets/CET3904E_CET3906E.PDF" H 2150 2000 50  0001 C CNN
+	1    2150 2000
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:Q_PNP_BEC Q5
+U 1 1 615A4244
+P 1600 2000
+F 0 "Q5" H 1791 1954 50  0000 L CNN
+F 1 "CET3906E" H 1791 2045 50  0000 L CNN
+F 2 "discrete555:SOT-883L" H 1800 2100 50  0001 C CNN
+F 3 "https://my.centralsemi.com/datasheets/CET3904E_CET3906E.PDF" H 1600 2000 50  0001 C CNN
+	1    1600 2000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1500 1525 1500 1800
+Wire Wire Line
+	1800 2000 1875 2000
+Wire Wire Line
+	1500 2200 1500 2250
+Wire Wire Line
+	1500 2250 1875 2250
+Wire Wire Line
+	1875 2250 1875 2000
+Connection ~ 1875 2000
+Wire Wire Line
+	1875 2000 1950 2000
+Text GLabel 1000 1000 0    50   Input ~ 0
+Vcc
+Wire Wire Line
+	1000 1000 1500 1000
+Wire Wire Line
+	1500 1000 1500 1225
+Connection ~ 1500 1000
+Wire Wire Line
+	3250 1000 3250 1225
+Wire Wire Line
+	2375 1000 2375 1225
+$Comp
+L Device:R R2
+U 1 1 615A371E
+P 2375 1375
+F 0 "R2" H 2445 1421 50  0000 L CNN
+F 1 "820Ω" H 2445 1330 50  0000 L CNN
+F 2 "Resistor_SMD:R_0201_0603Metric" V 2305 1375 50  0001 C CNN
+F 3 "~" H 2375 1375 50  0001 C CNN
+	1    2375 1375
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Q_PNP_BEC Q8
+U 1 1 615B108D
+P 3150 2000
+F 0 "Q8" H 3341 1954 50  0000 L CNN
+F 1 "CET3906E" H 3341 2045 50  0000 L CNN
+F 2 "discrete555:SOT-883L" H 3350 2100 50  0001 C CNN
+F 3 "https://my.centralsemi.com/datasheets/CET3904E_CET3906E.PDF" H 3150 2000 50  0001 C CNN
+	1    3150 2000
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:Q_PNP_BEC Q7
+U 1 1 615AFA12
+P 2600 2000
+F 0 "Q7" H 2475 1775 50  0000 L CNN
+F 1 "CET3906E" H 2250 1850 50  0000 L CNN
+F 2 "discrete555:SOT-883L" H 2800 2100 50  0001 C CNN
+F 3 "https://my.centralsemi.com/datasheets/CET3904E_CET3906E.PDF" H 2600 2000 50  0001 C CNN
+	1    2600 2000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2800 2000 2875 2000
+Wire Wire Line
+	2250 1800 2250 1750
+Wire Wire Line
+	2500 1750 2500 1800
+Wire Wire Line
+	2375 1525 2375 1750
+Wire Wire Line
+	3250 1525 3250 1800
+Wire Wire Line
+	3250 2200 3250 2250
+Wire Wire Line
+	3250 2250 2875 2250
+Wire Wire Line
+	2875 2250 2875 2000
+Connection ~ 2875 2000
+Wire Wire Line
+	2875 2000 2950 2000
+Wire Wire Line
+	2500 2375 2500 2200
+$Comp
+L power:GNDREF #PWR0101
+U 1 1 615B86EB
+P 2500 2375
+F 0 "#PWR0101" H 2500 2125 50  0001 C CNN
+F 1 "GNDREF" H 2505 2202 50  0001 C CNN
+F 2 "" H 2500 2375 50  0001 C CNN
+F 3 "" H 2500 2375 50  0001 C CNN
+	1    2500 2375
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Q_NPN_BEC Q1
+U 1 1 615BB370
+P 1525 3500
+F 0 "Q1" H 1716 3546 50  0000 L CNN
+F 1 "CET3904E" H 1716 3455 50  0000 L CNN
+F 2 "discrete555:SOT-883L-alt" H 1725 3600 50  0001 C CNN
+F 3 "https://my.centralsemi.com/datasheets/CET3904E_CET3906E.PDF" H 1525 3500 50  0001 C CNN
+	1    1525 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Q_NPN_BEC Q2
+U 1 1 615BC822
+P 2025 4000
+F 0 "Q2" H 1900 4225 50  0000 L CNN
+F 1 "CET3904E" H 1675 4150 50  0000 L CNN
+F 2 "discrete555:SOT-883L-alt" H 2225 4100 50  0001 C CNN
+F 3 "https://my.centralsemi.com/datasheets/CET3904E_CET3906E.PDF" H 2025 4000 50  0001 C CNN
+	1    2025 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Q_NPN_BEC Q3
+U 1 1 615BDEA9
+P 2725 4000
+F 0 "Q3" H 2600 4225 50  0000 L CNN
+F 1 "CET3904E" H 2375 4150 50  0000 L CNN
+F 2 "discrete555:SOT-883L-alt" H 2925 4100 50  0001 C CNN
+F 3 "https://my.centralsemi.com/datasheets/CET3904E_CET3906E.PDF" H 2725 4000 50  0001 C CNN
+	1    2725 4000
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:Q_NPN_BEC Q4
+U 1 1 615BE56B
+P 3225 3500
+F 0 "Q4" H 3416 3546 50  0000 L CNN
+F 1 "CET3904E" H 3416 3455 50  0000 L CNN
+F 2 "discrete555:SOT-883L-alt" H 3425 3600 50  0001 C CNN
+F 3 "https://my.centralsemi.com/datasheets/CET3904E_CET3906E.PDF" H 3225 3500 50  0001 C CNN
+	1    3225 3500
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1625 4000 1625 3700
+Text GLabel 1000 3500 0    50   Input ~ 0
+THR
+Wire Wire Line
+	1875 2250 1875 3000
+Wire Wire Line
+	1625 3000 1625 3300
+Connection ~ 1875 2250
+$Comp
+L Device:R R5
+U 1 1 615C11A0
+P 2375 4775
+F 0 "R5" H 2445 4821 50  0000 L CNN
+F 1 "10kΩ" H 2445 4730 50  0000 L CNN
+F 2 "Resistor_SMD:R_0201_0603Metric" V 2305 4775 50  0001 C CNN
+F 3 "~" H 2375 4775 50  0001 C CNN
+	1    2375 4775
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3125 4000 3125 3700
+Wire Wire Line
+	3125 3300 3125 3000
+Wire Wire Line
+	2625 3000 2625 3800
+Wire Wire Line
+	2875 2250 2875 3000
+Connection ~ 2875 2250
+Text GLabel 1000 5250 0    50   Input ~ 0
+GND
+Wire Wire Line
+	2375 5250 2375 4925
+Wire Wire Line
+	2375 5250 2375 5375
+$Comp
+L power:GNDREF #PWR0102
+U 1 1 615C497F
+P 2375 5375
+F 0 "#PWR0102" H 2375 5125 50  0001 C CNN
+F 1 "GNDREF" H 2380 5202 50  0001 C CNN
+F 2 "" H 2375 5375 50  0001 C CNN
+F 3 "" H 2375 5375 50  0001 C CNN
+	1    2375 5375
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2375 4625 2375 4250
+Wire Wire Line
+	3425 3500 3625 3500
+Wire Wire Line
+	3625 3500 3625 5750
+Connection ~ 3625 3500
+Wire Wire Line
+	3625 3500 4000 3500
+Text GLabel 1000 5750 0    50   Input ~ 0
+CTRL
+$Comp
+L Device:R R8
+U 1 1 615C74F6
+P 4000 4125
+F 0 "R8" H 4070 4171 50  0000 L CNN
+F 1 "4.7kΩ" H 4070 4080 50  0000 L CNN
+F 2 "Resistor_SMD:R_0201_0603Metric" V 3930 4125 50  0001 C CNN
+F 3 "~" H 4000 4125 50  0001 C CNN
+	1    4000 4125
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R9
+U 1 1 615C7A58
+P 4000 4875
+F 0 "R9" H 4070 4921 50  0000 L CNN
+F 1 "4.7kΩ" H 4070 4830 50  0000 L CNN
+F 2 "Resistor_SMD:R_0201_0603Metric" V 3930 4875 50  0001 C CNN
+F 3 "~" H 4000 4875 50  0001 C CNN
+	1    4000 4875
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 4275 4000 4500
+Wire Wire Line
+	4000 5025 4000 5250
+Wire Wire Line
+	2250 2200 2250 2750
+$Comp
+L Device:R R7
+U 1 1 615CADAC
+P 4000 1375
+F 0 "R7" H 4070 1421 50  0000 L CNN
+F 1 "4.7kΩ" H 4070 1330 50  0000 L CNN
+F 2 "Resistor_SMD:R_0201_0603Metric" V 3930 1375 50  0001 C CNN
+F 3 "~" H 4000 1375 50  0001 C CNN
+	1    4000 1375
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 1000 4000 1225
+$Comp
+L Device:Q_PNP_BEC Q10
+U 1 1 615D33E0
+P 4775 4000
+F 0 "Q10" H 4966 3954 50  0000 L CNN
+F 1 "CET3906E" H 4966 4045 50  0000 L CNN
+F 2 "discrete555:SOT-883L" H 4975 4100 50  0001 C CNN
+F 3 "https://my.centralsemi.com/datasheets/CET3904E_CET3906E.PDF" H 4775 4000 50  0001 C CNN
+	1    4775 4000
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:Q_PNP_BEC Q11
+U 1 1 615D9D85
+P 5275 3500
+F 0 "Q11" H 5175 3275 50  0000 L CNN
+F 1 "CET3906E" H 4950 3350 50  0000 L CNN
+F 2 "discrete555:SOT-883L" H 5475 3600 50  0001 C CNN
+F 3 "https://my.centralsemi.com/datasheets/CET3904E_CET3906E.PDF" H 5275 3500 50  0001 C CNN
+	1    5275 3500
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:Q_PNP_BEC Q12
+U 1 1 615DB7D6
+P 5725 3500
+F 0 "Q12" H 5625 3275 50  0000 L CNN
+F 1 "CET3906E" H 5400 3350 50  0000 L CNN
+F 2 "discrete555:SOT-883L" H 5925 3600 50  0001 C CNN
+F 3 "https://my.centralsemi.com/datasheets/CET3904E_CET3906E.PDF" H 5725 3500 50  0001 C CNN
+	1    5725 3500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4575 4000 4500 4000
+Wire Wire Line
+	4500 4000 4500 6250
+Text GLabel 1000 6250 0    50   Input ~ 0
+TRIG
+$Comp
+L Device:Q_PNP_BEC Q13
+U 1 1 615E1D38
+P 6100 4000
+F 0 "Q13" H 6000 3775 50  0000 L CNN
+F 1 "CET3906E" H 5775 3850 50  0000 L CNN
+F 2 "discrete555:SOT-883L" H 6300 4100 50  0001 C CNN
+F 3 "https://my.centralsemi.com/datasheets/CET3904E_CET3906E.PDF" H 6100 4000 50  0001 C CNN
+	1    6100 4000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4875 3800 4875 3500
+Wire Wire Line
+	4875 3500 5075 3500
+Wire Wire Line
+	5375 3300 5375 3250
+Wire Wire Line
+	5375 3250 5500 3250
+Wire Wire Line
+	5625 3250 5625 3300
+Wire Wire Line
+	5925 3500 6000 3500
+Wire Wire Line
+	6000 3500 6000 3800
+Wire Wire Line
+	5625 4250 5625 3700
+Wire Wire Line
+	6000 4200 6000 4250
+$Comp
+L power:GNDREF #PWR0103
+U 1 1 615E8D3C
+P 4875 4375
+F 0 "#PWR0103" H 4875 4125 50  0001 C CNN
+F 1 "GNDREF" H 4880 4202 50  0001 C CNN
+F 2 "" H 4875 4375 50  0001 C CNN
+F 3 "" H 4875 4375 50  0001 C CNN
+	1    4875 4375
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4875 4375 4875 4200
+$Comp
+L power:GNDREF #PWR0104
+U 1 1 615EB051
+P 5625 4375
+F 0 "#PWR0104" H 5625 4125 50  0001 C CNN
+F 1 "GNDREF" H 5630 4202 50  0001 C CNN
+F 2 "" H 5625 4375 50  0001 C CNN
+F 3 "" H 5625 4375 50  0001 C CNN
+	1    5625 4375
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5625 4375 5625 4250
+$Comp
+L Device:R R6
+U 1 1 615F2F62
+P 5375 5000
+F 0 "R6" H 5445 5046 50  0000 L CNN
+F 1 "100kΩ" H 5445 4955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0201_0603Metric" V 5305 5000 50  0001 C CNN
+F 3 "~" H 5375 5000 50  0001 C CNN
+	1    5375 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5375 5150 5375 5250
+Wire Wire Line
+	4000 4500 6375 4500
+Wire Wire Line
+	6375 4500 6375 4000
+Wire Wire Line
+	4000 4500 4000 4725
+$Comp
+L Device:R R4
+U 1 1 615FDD50
+P 5500 1375
+F 0 "R4" H 5570 1421 50  0000 L CNN
+F 1 "1kΩ" H 5570 1330 50  0000 L CNN
+F 2 "Resistor_SMD:R_0201_0603Metric" V 5430 1375 50  0001 C CNN
+F 3 "~" H 5500 1375 50  0001 C CNN
+	1    5500 1375
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 1225 5500 1000
+$Comp
+L Device:Q_PNP_BEC Q9
+U 1 1 616006D7
+P 5600 2000
+F 0 "Q9" H 5825 1975 50  0000 L CNN
+F 1 "CET3906E" H 5800 2075 50  0000 L CNN
+F 2 "discrete555:SOT-883L" H 5800 2100 50  0001 C CNN
+F 3 "https://my.centralsemi.com/datasheets/CET3904E_CET3906E.PDF" H 5600 2000 50  0001 C CNN
+	1    5600 2000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5500 1800 5500 1525
+Wire Wire Line
+	5500 2200 5500 3250
+Wire Wire Line
+	2250 1750 2375 1750
+Connection ~ 2875 3000
+Connection ~ 3250 1000
+Wire Wire Line
+	3250 1000 4000 1000
+Connection ~ 2375 5250
+Wire Wire Line
+	1000 5250 2375 5250
+Wire Wire Line
+	2375 5250 4000 5250
+Connection ~ 2375 1000
+Wire Wire Line
+	2375 1000 3250 1000
+Connection ~ 2375 1750
+Wire Wire Line
+	2375 1750 2500 1750
+Wire Wire Line
+	1500 1000 2375 1000
+Wire Wire Line
+	2125 3800 2125 3000
+Wire Wire Line
+	1625 3000 1875 3000
+Connection ~ 1875 3000
+Wire Wire Line
+	1875 3000 2125 3000
+Wire Wire Line
+	1625 4000 1825 4000
+Wire Wire Line
+	1000 3500 1325 3500
+Wire Wire Line
+	2125 4200 2125 4250
+Connection ~ 2375 4250
+Wire Wire Line
+	2925 4000 3125 4000
+Wire Wire Line
+	2875 3000 3125 3000
+Wire Wire Line
+	2625 3000 2875 3000
+Wire Wire Line
+	2625 4200 2625 4250
+Wire Wire Line
+	2375 4250 2625 4250
+Wire Wire Line
+	2125 4250 2375 4250
+Wire Wire Line
+	3625 5750 1000 5750
+Wire Wire Line
+	4000 1525 4000 3500
+Wire Wire Line
+	4000 3500 4000 3975
+Connection ~ 4000 4500
+Connection ~ 4000 3500
+Connection ~ 4000 5250
+Wire Wire Line
+	4000 5250 5375 5250
+Connection ~ 4000 1000
+Wire Wire Line
+	4000 1000 5500 1000
+Connection ~ 5500 3250
+Wire Wire Line
+	5500 3250 5625 3250
+Wire Wire Line
+	4500 6250 1000 6250
+Connection ~ 5375 5250
+Wire Wire Line
+	5375 3700 5375 4750
+Connection ~ 5625 4250
+Wire Wire Line
+	6000 4250 5625 4250
+Connection ~ 5500 1000
+Wire Wire Line
+	5375 4750 6325 4750
+Connection ~ 5375 4750
+Wire Wire Line
+	5375 4750 5375 4850
+$Comp
+L Device:Q_NPN_BEC Q15
+U 1 1 616C109A
+P 6525 4750
+F 0 "Q15" H 6716 4796 50  0000 L CNN
+F 1 "CET3904E" H 6716 4705 50  0000 L CNN
+F 2 "discrete555:SOT-883L-alt" H 6725 4850 50  0001 C CNN
+F 3 "https://my.centralsemi.com/datasheets/CET3904E_CET3906E.PDF" H 6525 4750 50  0001 C CNN
+	1    6525 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6625 4950 6625 5250
+Wire Wire Line
+	5375 5250 6625 5250
+Wire Wire Line
+	6375 4000 6300 4000
+Wire Wire Line
+	6625 4550 6625 4500
+Wire Wire Line
+	2250 2750 6625 2750
+$Comp
+L Device:Q_NPN_BEC Q16
+U 1 1 616D70DE
+P 7025 4500
+F 0 "Q16" H 7216 4546 50  0000 L CNN
+F 1 "CET3904E" H 7216 4455 50  0000 L CNN
+F 2 "discrete555:SOT-883L-alt" H 7225 4600 50  0001 C CNN
+F 3 "https://my.centralsemi.com/datasheets/CET3904E_CET3906E.PDF" H 7025 4500 50  0001 C CNN
+	1    7025 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6825 4500 6625 4500
+Connection ~ 6625 4500
+Wire Wire Line
+	6625 4500 6625 2750
+Wire Wire Line
+	7125 4700 7125 5250
+Wire Wire Line
+	7125 5250 6625 5250
+Connection ~ 6625 5250
+$Comp
+L Device:Q_NPN_BEC Q18
+U 1 1 616DC78B
+P 7025 4000
+F 0 "Q18" H 7216 4046 50  0000 L CNN
+F 1 "CET3904E" H 7216 3955 50  0000 L CNN
+F 2 "discrete555:SOT-883L-alt" H 7225 4100 50  0001 C CNN
+F 3 "https://my.centralsemi.com/datasheets/CET3904E_CET3906E.PDF" H 7025 4000 50  0001 C CNN
+	1    7025 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Q_NPN_BEC Q17
+U 1 1 616DD172
+P 7525 4250
+F 0 "Q17" H 7716 4296 50  0000 L CNN
+F 1 "CET3904E" H 7716 4205 50  0000 L CNN
+F 2 "discrete555:SOT-883L-alt" H 7725 4350 50  0001 C CNN
+F 3 "https://my.centralsemi.com/datasheets/CET3904E_CET3906E.PDF" H 7525 4250 50  0001 C CNN
+	1    7525 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7325 4250 7125 4250
+Wire Wire Line
+	7125 4250 7125 4200
+Wire Wire Line
+	7125 4250 7125 4300
+Connection ~ 7125 4250
+Wire Wire Line
+	6825 4000 6750 4000
+Wire Wire Line
+	6750 4000 6750 3750
+Wire Wire Line
+	6750 3750 7125 3750
+Wire Wire Line
+	7125 3750 7125 3800
+Wire Wire Line
+	7625 4450 7625 5250
+Wire Wire Line
+	7625 5250 7125 5250
+Connection ~ 7125 5250
+$Comp
+L Device:R R10
+U 1 1 616E86FC
+P 6750 2375
+F 0 "R10" H 6820 2421 50  0000 L CNN
+F 1 "15kΩ" H 6820 2330 50  0000 L CNN
+F 2 "Resistor_SMD:R_0201_0603Metric" V 6680 2375 50  0001 C CNN
+F 3 "~" H 6750 2375 50  0001 C CNN
+	1    6750 2375
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 2000 6750 2000
+Wire Wire Line
+	6750 2000 6750 2225
+Wire Wire Line
+	6750 2525 6750 3750
+Connection ~ 6750 3750
+$Comp
+L Device:Q_PNP_BEC Q192
+U 1 1 616EC28D
+P 6850 1625
+F 0 "Q192" H 7075 1600 50  0000 L CNN
+F 1 "CET3906E" H 7050 1700 50  0000 L CNN
+F 2 "discrete555:SOT-883L" H 7050 1725 50  0001 C CNN
+F 3 "https://my.centralsemi.com/datasheets/CET3904E_CET3906E.PDF" H 6850 1625 50  0001 C CNN
+	1    6850 1625
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6750 1825 6750 2000
+Connection ~ 6750 2000
+Wire Wire Line
+	6750 2000 7125 2000
+Wire Wire Line
+	7125 2000 7125 1625
+Wire Wire Line
+	7125 1625 7050 1625
+$Comp
+L Device:Q_PNP_BEC Q191
+U 1 1 616F31CC
+P 7400 1625
+F 0 "Q191" H 7625 1600 50  0000 L CNN
+F 1 "CET3906E" H 7600 1700 50  0000 L CNN
+F 2 "discrete555:SOT-883L" H 7600 1725 50  0001 C CNN
+F 3 "https://my.centralsemi.com/datasheets/CET3904E_CET3906E.PDF" H 7400 1625 50  0001 C CNN
+	1    7400 1625
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	7200 1625 7125 1625
+Connection ~ 7125 1625
+Wire Wire Line
+	6750 1250 6750 1425
+Wire Wire Line
+	7500 1425 7500 1250
+Wire Wire Line
+	7500 1250 7125 1250
+Wire Wire Line
+	7125 1250 7125 1000
+Wire Wire Line
+	5500 1000 7125 1000
+Connection ~ 7125 1250
+Wire Wire Line
+	7125 1250 6750 1250
+Wire Wire Line
+	7500 2525 7500 2750
+Wire Wire Line
+	7500 2750 6625 2750
+Connection ~ 6625 2750
+$Comp
+L Device:R R11
+U 1 1 61701EA6
+P 7500 2375
+F 0 "R11" H 7570 2421 50  0000 L CNN
+F 1 "4.7kΩ" H 7570 2330 50  0000 L CNN
+F 2 "Resistor_SMD:R_0201_0603Metric" V 7430 2375 50  0001 C CNN
+F 3 "~" H 7500 2375 50  0001 C CNN
+	1    7500 2375
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7625 4050 7625 2375
+Wire Wire Line
+	7625 2000 7500 2000
+Wire Wire Line
+	7500 1825 7500 2000
+Wire Wire Line
+	7500 2000 7500 2225
+Connection ~ 7500 2000
+$Comp
+L Device:Q_NPN_BEC Q20
+U 1 1 61712624
+P 8025 2375
+F 0 "Q20" H 7875 2600 50  0000 L CNN
+F 1 "CET3904E" H 7725 2525 50  0000 L CNN
+F 2 "discrete555:SOT-883L-alt" H 8225 2475 50  0001 C CNN
+F 3 "https://my.centralsemi.com/datasheets/CET3904E_CET3906E.PDF" H 8025 2375 50  0001 C CNN
+	1    8025 2375
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R15
+U 1 1 61713AEC
+P 8125 4875
+F 0 "R15" H 8195 4921 50  0000 L CNN
+F 1 "4.7kΩ" H 8195 4830 50  0000 L CNN
+F 2 "Resistor_SMD:R_0201_0603Metric" V 8055 4875 50  0001 C CNN
+F 3 "~" H 8125 4875 50  0001 C CNN
+	1    8125 4875
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8125 2575 8125 2875
+Wire Wire Line
+	8125 5025 8125 5250
+Connection ~ 7625 5250
+$Comp
+L Device:R R12
+U 1 1 6171CC68
+P 8125 1375
+F 0 "R12" H 8056 1329 50  0000 R CNN
+F 1 "6.8kΩ" H 8056 1420 50  0000 R CNN
+F 2 "Resistor_SMD:R_0201_0603Metric" V 8055 1375 50  0001 C CNN
+F 3 "~" H 8125 1375 50  0001 C CNN
+	1    8125 1375
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	8125 1225 8125 1000
+Wire Wire Line
+	8125 1000 7125 1000
+Connection ~ 7125 1000
+Wire Wire Line
+	8125 1525 8125 1875
+Wire Wire Line
+	7825 2375 7625 2375
+Connection ~ 7625 2375
+Wire Wire Line
+	7625 2375 7625 2000
+$Comp
+L Device:Q_NPN_BEC Q22
+U 1 1 617297DE
+P 9400 1625
+F 0 "Q22" H 9591 1671 50  0000 L CNN
+F 1 "CET3904E" H 9591 1580 50  0000 L CNN
+F 2 "discrete555:SOT-883L-alt" H 9600 1725 50  0001 C CNN
+F 3 "https://my.centralsemi.com/datasheets/CET3904E_CET3906E.PDF" H 9400 1625 50  0001 C CNN
+	1    9400 1625
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Q_NPN_BEC Q21
+U 1 1 6172AFA4
+P 8650 1375
+F 0 "Q21" H 8841 1421 50  0000 L CNN
+F 1 "CET3904E" H 8841 1330 50  0000 L CNN
+F 2 "discrete555:SOT-883L-alt" H 8850 1475 50  0001 C CNN
+F 3 "https://my.centralsemi.com/datasheets/CET3904E_CET3906E.PDF" H 8650 1375 50  0001 C CNN
+	1    8650 1375
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8750 1175 8750 1000
+Connection ~ 8125 1000
+Wire Wire Line
+	9500 1425 9500 1000
+Wire Wire Line
+	8450 1375 8375 1375
+Wire Wire Line
+	8375 1375 8375 1875
+Connection ~ 8125 1875
+Wire Wire Line
+	8125 1875 8125 2175
+Wire Wire Line
+	8375 1875 8125 1875
+Connection ~ 8750 1000
+Wire Wire Line
+	8750 1000 8125 1000
+Wire Wire Line
+	8750 1000 9500 1000
+$Comp
+L Device:R R13
+U 1 1 6174E87E
+P 8750 1875
+F 0 "R13" H 8681 1829 50  0000 R CNN
+F 1 "3.9kΩ" H 8681 1920 50  0000 R CNN
+F 2 "Resistor_SMD:R_0201_0603Metric" V 8680 1875 50  0001 C CNN
+F 3 "~" H 8750 1875 50  0001 C CNN
+	1    8750 1875
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	8750 1575 8750 1625
+$Comp
+L Device:Q_PNP_BEC Q23
+U 1 1 61754415
+P 8650 2375
+F 0 "Q23" H 8875 2350 50  0000 L CNN
+F 1 "CET3906E" H 8850 2450 50  0000 L CNN
+F 2 "discrete555:SOT-883L" H 8850 2475 50  0001 C CNN
+F 3 "https://my.centralsemi.com/datasheets/CET3904E_CET3906E.PDF" H 8650 2375 50  0001 C CNN
+	1    8650 2375
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	8750 2025 8750 2125
+Connection ~ 8750 2125
+Wire Wire Line
+	8750 2125 8750 2175
+Wire Wire Line
+	9500 2125 9500 1825
+Wire Wire Line
+	8750 2125 9500 2125
+Wire Wire Line
+	9200 1625 8750 1625
+Connection ~ 8750 1625
+Wire Wire Line
+	8750 1625 8750 1725
+Wire Wire Line
+	8450 2375 8375 2375
+Wire Wire Line
+	8375 2375 8375 1875
+Connection ~ 8375 1875
+Wire Wire Line
+	8750 2575 8750 2625
+Wire Wire Line
+	8750 2625 8375 2625
+Wire Wire Line
+	8375 2625 8375 2375
+Connection ~ 8375 2375
+Connection ~ 9500 2125
+$Comp
+L Device:R R14
+U 1 1 6177D6FA
+P 8850 2875
+F 0 "R14" V 8643 2875 50  0000 C CNN
+F 1 "220Ω" V 8734 2875 50  0000 C CNN
+F 2 "Resistor_SMD:R_0201_0603Metric" V 8780 2875 50  0001 C CNN
+F 3 "~" H 8850 2875 50  0001 C CNN
+	1    8850 2875
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10000 2125 9500 2125
+Text GLabel 10000 2125 2    50   Input ~ 0
+OUT
+Wire Wire Line
+	9500 2125 9500 2675
+$Comp
+L Device:Q_NPN_BEC Q24
+U 1 1 61772586
+P 9400 2875
+F 0 "Q24" H 9591 2921 50  0000 L CNN
+F 1 "CET3904E" H 9591 2830 50  0000 L CNN
+F 2 "discrete555:SOT-883L-alt" H 9600 2975 50  0001 C CNN
+F 3 "https://my.centralsemi.com/datasheets/CET3904E_CET3906E.PDF" H 9400 2875 50  0001 C CNN
+	1    9400 2875
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9200 2875 9000 2875
+Wire Wire Line
+	8700 2875 8375 2875
+Connection ~ 8125 2875
+Wire Wire Line
+	8125 2875 8125 4725
+$Comp
+L power:GNDREF #PWR0105
+U 1 1 61794168
+P 9500 3200
+F 0 "#PWR0105" H 9500 2950 50  0001 C CNN
+F 1 "GNDREF" H 9505 3027 50  0001 C CNN
+F 2 "" H 9500 3200 50  0001 C CNN
+F 3 "" H 9500 3200 50  0001 C CNN
+	1    9500 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9500 3200 9500 3075
+$Comp
+L Device:Q_NPN_BEC Q14
+U 1 1 6179978D
+P 9400 4875
+F 0 "Q14" H 9591 4921 50  0000 L CNN
+F 1 "CET3904E" H 9591 4830 50  0000 L CNN
+F 2 "discrete555:SOT-883L-alt" H 9600 4975 50  0001 C CNN
+F 3 "https://my.centralsemi.com/datasheets/CET3904E_CET3906E.PDF" H 9400 4875 50  0001 C CNN
+	1    9400 4875
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9500 5075 9500 5250
+Wire Wire Line
+	7625 5250 8125 5250
+Connection ~ 8125 5250
+Wire Wire Line
+	8125 5250 9500 5250
+Text GLabel 10000 4500 2    50   Input ~ 0
+DIS
+Wire Wire Line
+	10000 4500 9500 4500
+Wire Wire Line
+	9500 4500 9500 4675
+$Comp
+L Device:R R16
+U 1 1 617B1A5A
+P 8375 4500
+F 0 "R16" H 8445 4546 50  0000 L CNN
+F 1 "100Ω" H 8445 4455 50  0000 L CNN
+F 2 "Resistor_SMD:R_0201_0603Metric" V 8305 4500 50  0001 C CNN
+F 3 "~" H 8375 4500 50  0001 C CNN
+	1    8375 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8375 4650 8375 4875
+Wire Wire Line
+	8375 4875 8750 4875
+Wire Wire Line
+	8375 4350 8375 2875
+Connection ~ 8375 2875
+Wire Wire Line
+	8375 2875 8125 2875
+Wire Wire Line
+	7125 3750 8750 3750
+Connection ~ 7125 3750
+$Comp
+L Device:Q_PNP_BEC Q25
+U 1 1 617C475C
+P 8850 4000
+F 0 "Q25" H 8700 3800 50  0000 L CNN
+F 1 "CET3906E" H 8500 3875 50  0000 L CNN
+F 2 "discrete555:SOT-883L" H 9050 4100 50  0001 C CNN
+F 3 "https://my.centralsemi.com/datasheets/CET3904E_CET3906E.PDF" H 8850 4000 50  0001 C CNN
+	1    8850 4000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8750 3750 8750 3800
+Wire Wire Line
+	8750 4200 8750 4875
+Connection ~ 8750 4875
+Wire Wire Line
+	8750 4875 9200 4875
+$Comp
+L Device:R R17
+U 1 1 617D2BEA
+P 9500 4000
+F 0 "R17" V 9325 3950 50  0000 L CNN
+F 1 "100kΩ" V 9400 4000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0201_0603Metric" V 9430 4000 50  0001 C CNN
+F 3 "~" H 9500 4000 50  0001 C CNN
+	1    9500 4000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9050 4000 9350 4000
+Wire Wire Line
+	9650 4000 10000 4000
+Text GLabel 10000 4000 2    50   Input ~ 0
+~RST
+$EndSCHEMATC
